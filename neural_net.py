@@ -92,7 +92,7 @@ def train_for_inside_circle(nn):
         targets.append([Node(1.0) if distance <= 0.5 else Node(0.0)])
     for epoch in range(1000):
         for i in range(len(training_data)):
-            nn.train(training_data[i], targets[i], learning_rate=0.1)
+            nn.train(training_data[i], targets[i], learning_rate=0.01)
     
     # Test Point 1: Inside Circle
     test_data_in = [Node(0.1), Node(0.1)]
