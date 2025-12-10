@@ -84,7 +84,7 @@ def test_circle_visual_ascii(nn):
 def train_for_inside_circle(nn):
     training_data = []
     targets = []
-    for _ in range(300):
+    for _ in range(500):
         x = Node(random.uniform(-1, 1))
         y = Node(random.uniform(-1, 1))
         training_data.append([x, y])
@@ -108,6 +108,6 @@ def train_for_inside_circle(nn):
     print("-" * 30)
 
 if __name__ == "__main__":
-    nn = NeuralNet([2, 8, 1])
+    nn = NeuralNet([2, 16, 1])
     train_for_inside_circle(nn)
     test_circle_visual_ascii(nn)
