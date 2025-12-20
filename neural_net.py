@@ -4,7 +4,7 @@ from autograd_backward import Node
 
 class Neuron:
     def __init__(self, input_size):
-        self.weights = [Node(random.uniform(-0.5, 0.5)) for _ in range(input_size)]
+        self.weights = [Node(random.uniform(-0.1, 0.1)) for _ in range(input_size)]
         self.bias = Node(0.1)
 
     def forward(self, inputs):
